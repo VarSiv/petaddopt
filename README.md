@@ -63,3 +63,5 @@ Join our community of developers creating universal apps.
 ### the main layout mostly sets up global app stuff like auth and fonts
 
 ### the other layouts are similar, but they set stuff up for a specific route
+
+### [icons](https://icons.expo.fyi/Index) icon family feather
