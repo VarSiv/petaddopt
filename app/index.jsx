@@ -4,6 +4,10 @@ import { Pressable, Text, View } from "react-native";
 import { useUser } from "@clerk/clerk-expo";
 
 export default function Index() {
+
+  // this root index file doesn't really do much, just checks if user is logged in 
+  // and redirects to either login or home screen
+
   const {user} = useUser();
   return (
     <View

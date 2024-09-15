@@ -48,3 +48,18 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+# My own stuff
+
+## Auth is set up with clerk
+[docs basic](https://clerk.com/docs/quickstarts/expo)
+[docs oath](https://clerk.com/docs/custom-flows/oauth-connections)
+
+.env has my public api key
+
+### each folder in app is a route (i think) 
+### the Stack Screen in the main layout groups my screens by routes ig 
+
+### the main layout mostly sets up global app stuff like auth and fonts
+
+### the other layouts are similar, but they set stuff up for a specific route
