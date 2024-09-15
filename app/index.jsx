@@ -5,11 +5,12 @@ export default function Index() {
     <View
       style={{
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
       }}
     >
-      <Text>Hello world 2!</Text>
+      <Text style={{
+        fontFamily: 'outfit-regular',
+        fontSize: 30
+      }}>Hello world 2!</Text>
     </View>
   );
 }
