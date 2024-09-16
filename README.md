@@ -65,3 +65,15 @@ Join our community of developers creating universal apps.
 ### the other layouts are similar, but they set stuff up for a specific route
 
 ### [icons](https://icons.expo.fyi/Index) icon family feather
+
+### had to wrap my root _layout file in 
+```js
+   <GestureHandlerRootView style={{ flex: 1 }}>
+      {/* Your existing layout structure */}
+    </GestureHandlerRootView>
+```
+### for the home image slider to work
+
+### sliderlist makes me want to kms 
+
+### will be held together by hopes, dreams, chat gpt and duct tape

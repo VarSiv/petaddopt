@@ -2,7 +2,7 @@ import { Stack } from "expo-router";
 import { useFonts } from "expo-font";
 import { ClerkProvider, ClerkLoaded } from '@clerk/clerk-expo'
 import * as SecureStore from 'expo-secure-store'
-
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 const tokenCache = {
   async getToken(key) {
     try {
@@ -37,21 +37,23 @@ export default function RootLayout() {
     'outfit-bold': require('./../assets/fonts/Outfit-Bold.ttf'),
   })
   return (
-    <ClerkProvider tokenCache={tokenCache} publishableKey={publishableKey}>
-      <ClerkLoaded>
-        <Stack>
-          <Stack.Screen name="index" />
-          <Stack.Screen name="(tabs)" 
-            options={{
-              headerShown: false
-            }}/>
-          <Stack.Screen name="login/index" 
-            options={{
-              headerShown: false
-            }}
-          />
-        </Stack>
-      </ClerkLoaded>
-    </ClerkProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <ClerkProvider tokenCache={tokenCache} publishableKey={publishableKey}>
+        <ClerkLoaded>
+          <Stack>
+            <Stack.Screen name="index" />
+            <Stack.Screen name="(tabs)" 
+              options={{
+                headerShown: false
+              }}/>
+            <Stack.Screen name="login/index" 
+              options={{
+                headerShown: false
+              }}
+            />
+          </Stack>
+        </ClerkLoaded>
+      </ClerkProvider>
+    </GestureHandlerRootView>
   );
 }
