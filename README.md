@@ -77,3 +77,5 @@ Join our community of developers creating universal apps.
 ### sliderlist makes me want to kms 
 
 ### will be held together by hopes, dreams, chat gpt and duct tape
+
+### for some FUCKING reason the flatlist only works in a very specific way, otherwise refuses to render at all
