@@ -9,18 +9,20 @@ const ITEM_WIDTH = width * 0.9; // 80% of screen width
 export default function Slider() {
     const [sliderList, setSliderList] = useState([]);
 
-    useEffect(()=>{
-        getSliders()
-    },[])
-    //gets all documents from sliders collection, iterates and adds each one's data to sliderList
-    const getSliders=async()=>{
-        const snapshot = await getDocs(collection(db, 'sliders'));
-        setSliderList=([]);
-        snapshot.forEach((doc)=>{
-            console.log(doc.data())
-            setSliderList(sliderList=>[...sliderList, doc.data()])
-        })
-    }
+    useEffect(() => {
+        getSliders();
+    }, []);
+
+    // Gets all documents from sliders collection, iterates and adds each one's data to sliderList
+    const getSliders = async () => {
+        try {
+            const snapshot = await getDocs(collection(db, 'sliders'));
+            const newSliderList = snapshot.docs.map(doc => doc.data());
+            setSliderList(newSliderList);
+        } catch (error) {
+            console.error("Error fetching sliders:", error);
+        }
+    };
   return (
     <View style={{
         marginTop: 15
